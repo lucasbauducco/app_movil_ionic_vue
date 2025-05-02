@@ -13,9 +13,13 @@
           <ion-label>Tab 2</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab3" href="/tabs/tab3">
+        <ion-tab-button tab="takephoto" href="/tabs/takephoto">
           <ion-icon aria-hidden="true" :icon="square" />
-          <ion-label>Tab 3</ion-label>
+          <ion-label>Take Photo</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="gallery" href="/tabs/gallery">
+          <ion-icon aria-hidden="true" :icon="square" />
+          <ion-label>Gallery</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
