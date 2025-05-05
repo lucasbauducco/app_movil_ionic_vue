@@ -3,14 +3,14 @@
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1" href="/tabs/tab1">
+        <ion-tab-button tab="menu" href="/tabs/menu">
           <ion-icon aria-hidden="true" :icon="triangle" />
           <ion-label>Tab 1</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="tab2" href="/tabs/tab2">
+        <ion-tab-button tab="gallerytake" href="/tabs/gallerytake">
           <ion-icon aria-hidden="true" :icon="ellipse" />
-          <ion-label>Tab 2</ion-label>
+          <ion-label>Gallery Take</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="takephoto" href="/tabs/takephoto">
