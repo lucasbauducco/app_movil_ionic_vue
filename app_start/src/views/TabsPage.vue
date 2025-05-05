@@ -5,7 +5,7 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="menu" href="/tabs/menu">
           <ion-icon aria-hidden="true" :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
+          <ion-label>Menu</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="gallerytake" href="/tabs/gallerytake">

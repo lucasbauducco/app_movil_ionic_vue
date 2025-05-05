@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+
+// Cargar las vistas de forma perezosa (lazy loading)
+const TabsPage = () => import('@/views/TabsPage.vue');
+const Tab1Page = () => import('@/views/Tab1Page.vue');
+const MenuView = () => import('@/views/MenuViewPage.vue');
+const GalleryTakePage = () => import('@/views/GalleryTakePage.vue');
+const TakePhotoPage = () => import('@/views/TakePhotoPage.vue');
+const GalleryPage = () => import('@/views/GalleryPage.vue');
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/tabs/tab1',
   },
   {
     path: '/tabs/',
@@ -13,35 +20,35 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
-        redirect: '/tabs/tab1'
+        redirect: '/tabs/tab1',
       },
       {
         path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        component: Tab1Page,
       },
       {
         path: 'menu',
-        component: () => import('@/views/MenuView.vue')
+        component: MenuView,
       },
       {
         path: 'gallerytake',
-        component: () => import('@/views/GalleryTakePage.vue')
+        component: GalleryTakePage,
       },
       {
         path: 'takephoto',
-        component: () => import('@/views/TakePhotoPage.vue')
+        component: TakePhotoPage,
       },
       {
         path: 'gallery',
-        component: () => import('@/views/GalleryPage.vue')
+        component: GalleryPage,
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
